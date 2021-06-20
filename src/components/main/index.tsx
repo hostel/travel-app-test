@@ -16,7 +16,11 @@ import styles from './main.module.scss';
  */
 export const Main = (): React.ReactElement => {
   const [isContent, set] = useState(true);
-  const { dispatch, movies } = useStoreon('movies');
+  const {
+    dispatch,
+    movies,
+    movie: { active },
+  } = useStoreon('movies', 'movie');
 
   useEffect(() => {
     dispatch(moviesActions.fetchMovies);
@@ -40,7 +44,7 @@ export const Main = (): React.ReactElement => {
               <Content />
             </div>
           ) : (
-            <Form toggleVisibility={toggleVisibility} />
+            <Form toggleVisibility={toggleVisibility} activeEpisode={active.episode_id} />
           )}
         </React.Fragment>
       )}

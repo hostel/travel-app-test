@@ -10,6 +10,7 @@ import styles from './form.module.scss';
 
 interface IProps {
   toggleVisibility: () => void;
+  activeEpisode: number;
 }
 
 /**
@@ -18,7 +19,7 @@ interface IProps {
  * @param {IProps} props - props component
  * @returns {React.ReactElement} - element
  */
-export const Form = ({ toggleVisibility }: IProps): React.ReactElement => {
+export const Form = ({ toggleVisibility, activeEpisode }: IProps): React.ReactElement => {
   const [isSuccess, set] = useState(false);
   const [form, setValues] = useState({ username: '', email: '', review: '' });
 
@@ -62,6 +63,8 @@ export const Form = ({ toggleVisibility }: IProps): React.ReactElement => {
             <span className={styles.value}>{form.email}</span>
             <span className={styles.name}>Review:</span>
             <span className={styles.value}>{form.review}</span>
+            <span className={styles.name}>Episode:</span>
+            <span className={styles.value}>{activeEpisode}</span>
           </div>
         </div>
       ) : (

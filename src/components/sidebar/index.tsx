@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useStoreon } from 'storeon/react';
 import classNames from 'classnames';
 
@@ -24,6 +24,12 @@ export const Sidebar = ({ list, toggleVisibility }: IProps): React.ReactElement 
     dispatch,
     movie: { active, id },
   } = useStoreon('movie');
+
+  useEffect(() => {
+    if (!active) {
+      dispatch(filmActions.fetchMovie, 1);
+    }
+  }, []);
 
   /**
    * Set active film
