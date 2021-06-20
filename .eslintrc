@@ -1,0 +1,53 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:jsdoc/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended",
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "comma-dangle": 0,
+    "max-lines": ["error", {
+      "skipComments": true
+    }],
+    "no-trailing-spaces": "off",
+    "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "jsdoc/valid-types": "error",
+    "jsdoc/no-undefined-types": "off",
+    "no-console": ["error", {"allow": ["error"]}],
+    "require-jsdoc": ["error", {
+      "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "ClassDeclaration": true,
+          "ArrowFunctionExpression": true,
+          "FunctionExpression": true
+      }
+    }],
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.js"
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  },
+  "parserOptions":  {
+    "ecmaVersion":  2018,
+    "sourceType":  "module"
+  },
+  "plugins": ["jsdoc", "prettier"],
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true,
+  }
+}

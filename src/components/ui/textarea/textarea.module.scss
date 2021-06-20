@@ -1,0 +1,25 @@
+.textarea {
+  width: 100%;
+  min-height: 200px;
+  background: var(--color-white);
+  border: 1px solid var(--color-silver);
+  border-radius: 3px;
+  padding: 12px 20px;
+  font-size: 1.6rem;
+  color: var(--color-mine-shaft);
+  font-weight: var(--font-semi-bold);
+
+  &::placeholder {
+      opacity: 1;
+      color: var(--color-dusty-gray);
+  }
+
+  &:focus {
+      border: 1px solid var(--color-dusty-gray);
+      outline: none;
+  }
+
+  &:hover {
+      border: 1px solid var(--color-thatch);
+  }
+}

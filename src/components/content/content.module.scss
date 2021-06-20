@@ -1,0 +1,30 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapbg {
+  background-repeat: no-repeat;
+}
+
+.section {
+  overflow: scroll;
+}
+
+.wrapContent {
+  padding: 0 20px;
+}
+
+.wrapLoader {
+  width: 100px;
+}
+
+.error {
+  font-size: 1.8rem;
+  color: var(--color-burnt-sienna);
+}
+
+.text {
+  font-size: 1.6rem;
+}

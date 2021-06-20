@@ -1,0 +1,24 @@
+
+:root {
+  /*
+    For generate color name: 
+    https://chir.ag/projects/name-that-color/#6195ED
+  */
+  --color-dusty-gray: #979797;
+  --color-thatch: #ba969d;
+  --color-silver: #c4c4c4;
+  --color-mine-shaft: #333;
+  --color-eucalyptus: #219653;
+  --color-burnt-sienna: #eb5757;
+  --color-curious-blue: #3685d9;
+  --color-black: #000;
+  --color-white: #fff;
+
+  --weight-light: 300;
+  --weight-normal: 500;
+  --weight-medium: 500;
+  --weight-semi-bold: 600;
+  --weight-bold: 900;
+
+  --font-gothamPro: 'Gotham Pro', sans-serif;
+}
