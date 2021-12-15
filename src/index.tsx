@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { App } from '@components/app';
+import { App } from '@pages/app';
 
-import 'sanitize.css';
-import '@fonts/gothamPro.css';
-import './css/variables.css';
-import './css/base.scss';
+import 'antd/dist/antd.css';
 
 ReactDOM.render(<App />, document.getElementById('root'));
